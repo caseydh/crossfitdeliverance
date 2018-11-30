@@ -1,0 +1,83 @@
+// VARIABLES
+$primary-color: #F78502;
+$secondary-color: #252525;
+$dark-highlight: #343333;
+//Coaches
+#coaches{
+    background-color: #fafafa;
+    padding-bottom: 250px !important;
+}
+
+.coach-grid{
+    display:grid;
+	grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.coachBox{
+    width: 23vw;
+    height: 23vw;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+
+
+    .coachOverlay{
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 23vw;
+        height: 23vw;
+        background-color: rgba($color: #302f34, $alpha: 0.8);
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+        
+
+        .coachName{
+            font-size: 250%;
+
+        }
+        .coachTitle{
+            color:#b1b2b2;
+            font-size: 90%;
+        }
+    }
+
+    .coachOverlay:hover{
+        opacity: 1;
+    }
+    .coachOverlay:hover ~ .coachTag{
+        right: -110px;
+    }
+
+    .coachTag{
+        background-color: white;
+        color:$primary-color;
+        font-family: "Teko";
+        text-align: center;
+        padding: 3px;
+        padding-top: 7px;
+        width: 170px;
+        height: 35px;
+        position: absolute;
+        right:-68px;
+        transform: rotate(-90deg);
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        transition-property: right;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
+        line-height: 35px;
+    }
+}
+
+.coach1{
+    background-image: url('../images/coach1.jpg');
+    background-position-x: -120px;
+}
